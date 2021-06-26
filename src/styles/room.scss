@@ -60,7 +60,7 @@
                 background: #fefefe;
                 box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
                 resize: vertical;
-                min-height: 130px;
+                min-height: 115px;
             }
 
             .form-footer {
@@ -108,6 +108,35 @@
 
         .question-list {
             margin-top: 32px;
+
+            div.empty {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+
+                strong {
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    line-height: 2.7rem;
+                    margin-top: 16px;
+                    color: #29292E;
+                }
+        
+                p {
+                    font-family: 'Roboto', sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                    margin-top: 16px;
+                    color: #737380;
+                    max-width: 284px;
+                }
+            }
         }
     }
 }

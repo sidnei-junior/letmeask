@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logoImg from '../assets/images/logo.svg';
+import emptyImg from '../assets/images/empty-questions.svg'
 
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
@@ -27,7 +28,7 @@ export function Room() {
     const { title, questions } = useRoom(roomId)
 
     async function handleLoginAtRoom() {
-        if(!user) {
+        if (!user) {
             await signInWithGoogle();
         }
     }
@@ -103,7 +104,7 @@ export function Room() {
                 </form>
 
                 <div className="question-list">
-                    {questions.map(question => {
+                    {questions.length > 0 ? questions.map(question => {
                         return (
                             <Question
                                 key={question.id}
@@ -128,7 +129,13 @@ export function Room() {
                                 )}
                             </Question>
                         );
-                    })}
+                    }) : (
+                        <div className="empty">
+                            <img src={emptyImg} alt="Nenhuma pergunta nessa sala" />
+                            <strong>Nenhuma pergunta por aqui...</strong>
+                            <p>Faça o login e seja a primeira pessoa a fazer uma pergunta!</p>
+                        </div>
+                    )}
                 </div>
             </main>
         </div>
