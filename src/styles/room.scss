@@ -40,7 +40,7 @@
                 color: #29292e;
             }
     
-            span {
+            span.numberOfQuestions {
                 margin-left: 16px;
                 background: #e559f9;
                 border-radius: 9999px;
@@ -82,6 +82,7 @@
                     span {
                         margin-left: 8px;
                         color: #29292e;
+                        white-space: nowrap;
                         font-weight: 500;
                         font-size: 14px;
                     }
@@ -109,4 +110,49 @@
             margin-top: 32px;
         }
     }
+}
+
+@media (max-width: 900px) {
+    #page-room {
+        main {
+            width: 90%;
+        }
+    } 
+}
+
+@media (max-width: 426px) {
+    #page-room {
+        main {
+            .room-title {
+                span.numberOfQuestions {
+                    padding: 8px 13px;
+                    span {
+                        display: none;
+                    }
+                }
+            } 
+        } 
+    }
+}
+
+@media (max-width: 376px) {
+    #page-room {
+        main {
+            .room-title {
+                h1 {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+
+    .question {
+        footer {
+            .user-info {
+                span {
+                    margin-left: 0;
+                }
+            } 
+        } 
+    } 
 }
