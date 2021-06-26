@@ -34,3 +34,11 @@
         cursor: not-allowed;
     }
 }
+
+@media (max-width: 376px) {
+    .button {
+        height: 60px;   
+        padding: 0 14px;
+        font-size: 14px;
+    }
+}
