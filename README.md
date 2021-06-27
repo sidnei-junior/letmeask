@@ -2,6 +2,10 @@
   <img alt="letmeask" title="lemeask" src="src/assets/images/logo.svg" />
 </h1>
 
+<p align="center">
+ <img src="https://img.shields.io/static/v1?label=NLW&message=06&color=8257E5&labelColor=000000" alt="NLW 05" />
+</p>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
